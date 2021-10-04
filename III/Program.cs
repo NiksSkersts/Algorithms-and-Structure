@@ -126,23 +126,27 @@ namespace III
     }
     internal class Book
     {
+        // "Name and Author" only assignable on construction.
         public readonly string Name;
         public readonly string Author;
+        //declare "pages" as nullable int.
         public int? Pages;
-
+        
+        //Construct a Book using all variables;
         public Book(string name,string author, int pages)
         {
             Name = name;
             Author = author;
             Pages = pages;
         }
-
+        //Input only Name and Author. Leave Pages as null.
         public Book(string name, string author)
         {
             Name = name;
             Author = author;
         }
 
+        //Input values on construction
         public Book()
         {
             Console.WriteLine("Input Name: ");
@@ -156,6 +160,7 @@ namespace III
         public void Output()
         {
             Console.WriteLine(" Name of the book : {0}, \n\t Authored by: {1}",Name,Author);
+            //if Pages !null
             if (Pages.HasValue)
                 Console.WriteLine("\t Page count: {0}",Pages);
         }
@@ -164,6 +169,7 @@ namespace III
     internal class Item
     {
         public Item NextItem;
+        //Current Item
         public Book G;
     }
 
@@ -269,7 +275,10 @@ namespace III
             var current = _firstItem;
             while (current != null)
             {
-                if (current.G.Author == g1.Author&&current.G.Name==g1.Name&&current.G.Pages==g1.Pages)
+                if (current.G.Author == g1.Author && 
+                    current.G.Name==g1.Name && 
+                    current.G.Pages==g1.Pages
+                    )
                 {
                     return c;
                 }
@@ -285,7 +294,10 @@ namespace III
             var index = -1;
             while (current != null)
             {
-                if (current.G.Author == g1.Author && current.G.Name == g1.Name && current.G.Pages == g1.Pages)
+                if (current.G.Author == g1.Author && 
+                    current.G.Name == g1.Name && 
+                    current.G.Pages == g1.Pages
+                    )
                 {
                     index = c;
                 }
@@ -296,6 +308,7 @@ namespace III
         }
         public void Clear()
         {
+            // Yeet out first item. Rest will be collected by Garbage Collection.
             _firstItem = null;
         }
     }
