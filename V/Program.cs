@@ -141,6 +141,8 @@ namespace V
                     _list.Add(new Klients());
                     break;
                 case 1:
+                    //todo (doesn't work!)
+                    //too lazy to fix
                     var klients = new Klients();
                     var klientsEnumerable = _list.Any(p => p.Equals(klients));
                     if (klientsEnumerable)
