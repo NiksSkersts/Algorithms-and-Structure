@@ -8,9 +8,6 @@ using System.Net;
 MainMenu();
 void MainMenu()
 {
-    bool on = true;
-    int selection = 0;
-    var myEnumMemberCount = Enum.GetNames(typeof(Buttons)).Length-1;
     Koks koks = new Koks(
         new List<Zars>()
         {
@@ -84,6 +81,9 @@ void MainMenu()
                 new Zars(new Rajons("Nu nez iela","100"),new List<Zars>())
             })
         });
+    bool on = true;
+    int selection = 0;
+    var myEnumMemberCount = Enum.GetNames(typeof(Buttons)).Length-1;
     IterateThroughButtons();
     while (on)
     {
