@@ -115,9 +115,6 @@ bool on = true;
             i++;
         }
     }
-
-
-
 internal enum Buttons
 {
     Print,
