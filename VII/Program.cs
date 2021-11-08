@@ -34,7 +34,7 @@ void MainMenu()
                 new Zars(new Rajons("Alus iela","100"),new List<Zars>()),
                 new Zars(new Rajons("Nu nez iela","100"),new List<Zars>())
             }),
-            new Zars(new Rajons("Rīga","5000000"),new List<Zars>()
+            new Zars(new Rajons("Riga","5000000"),new List<Zars>()
             {
                 new Zars(new Rajons("Lielā iela","100"),new List<Zars>()),
                 new Zars(new Rajons("Pasta iela","100"),new List<Zars>(
